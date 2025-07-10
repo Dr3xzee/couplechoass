@@ -217,9 +217,6 @@ footer {
     gap: 0.5rem;
   }
 
-  #draw-canvas {
-    height: 220px;
-  }
 
   #chat-toggle {
     bottom: 80px;
