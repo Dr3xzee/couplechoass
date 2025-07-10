@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Couple Chaos 💘</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 💑 Avatars Section -->
+  <header>
+    <h1>💘 Couple Chaos</h1>
+  </header>
+
+  <section id="avatars">
+    <div class="avatar" id="you">
+      <img src="2f9cf5c5-6758-4b85-b089-8b317678ccd3.jpeg" alt="You" />
+      <span>You 🎙️</span>
+    </div>
+    <div class="avatar" id="partner">
+      <img src="2f9cf5c5-6758-4b85-b089-8b317678ccd3.jpeg" alt="Partner" />
+      <span>Partner 💞</span>
+    </div>
+  </section>
+
+  <div id="switch-popup" class="modal hidden">
+    <div class="modal-content">
+      <p>Partner wants to switch to Word Blitz 💥</p>
+      <button id="accept-switch">Accept ✅</button>
+      <button id="decline-switch">Decline ❌</button>
+    </div>
+  </div>
+  
+
+  <!-- 🎮 Game Area -->
+  <main>
+    <canvas id="draw-canvas" width="400" height="400"></canvas>
+
+
+    <div id="word-blitz">
+      <div id="blitz-word">Ready?</div>
+      <input type="text" id="blitz-input" placeholder="Type here..." />
+      <div id="blitz-status"></div>
+      <button id="start-blitz">Start 🔥</button>
+    </div>
+
+    <div class="game-controls">
+      <button id="save-btn">Save Drawing 💾</button>
+      <button id="switch-game">Switch Game 🔄</button>
+      <button id="mute-btn">Mute Mic 🎤</button>
+    </div>
+  </main>
+
+  <!-- 💬 Chat Toggle -->
+  <button id="chat-toggle">💬 <span id="chat-notify" style="display: none;">🔔</span></button>
+
+  <!-- 📥 Chat Sidebar -->
+  <aside id="chat-box" class="hidden">
+    <div id="chat-log"></div>
+    <input type="text" id="chat-input" placeholder="Type a sweet message..." />
+  </aside>
+
+  <!-- 📊 Footer -->
+  <footer>
+    <div id="round-info">❤️ Round 1 / 5</div>
+    <div id="scores">You: 0 ❤️ Partner: 0</div>
+    <button id="skip-round">Skip Round ⏭️</button>
+  </footer>
+
+  <!-- 🔌 Scripts -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://unpkg.com/simple-peer@9.11.1/simplepeer.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
